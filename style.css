@@ -1,0 +1,1123 @@
+/* ==================================================
+   TAKEOFF UP
+   HOJA DE ESTILOS GENERAL
+
+   Este mismo archivo CSS se utiliza
+   para todas nuestras páginas HTML.
+   ================================================== */
+
+
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+   ================================================== */
+
+* {
+
+    /*
+       Hace que padding y border formen
+       parte del tamaño del elemento.
+    */
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    color: #132b43;
+
+    background-color: #f5f6f8;
+
+}
+
+
+h1 {
+
+    font-size: 38px;
+
+    margin-top: 10px;
+
+    margin-bottom: 12px;
+
+}
+
+
+h2,
+h3,
+p {
+
+    line-height: 1.5;
+
+}
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+
+/* ==================================================
+   COLORES Y TEXTOS GENERALES
+   ================================================== */
+
+
+/* Texto vino */
+
+.subtitulo {
+
+    color: #812c4b;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* Texto gris */
+
+.texto-gris {
+
+    color: #7b8490;
+
+    line-height: 1.7;
+
+}
+
+
+/* Texto dorado */
+
+.texto-dorado {
+
+    color: #c6a45b;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* ==================================================
+   BOTÓN PRINCIPAL
+
+   Aunque visualmente parece un botón,
+   utilizamos <a> porque queremos navegar
+   entre páginas.
+   ================================================== */
+
+.boton-principal {
+
+    display: block;
+
+    background-color: #102d49;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+}
+
+
+/* :hover ocurre cuando ponemos
+   el mouse encima */
+
+.boton-principal:hover {
+
+    background-color: #812c4b;
+
+}
+
+
+
+/* ==================================================
+   01 - PÁGINA DE ACCESO
+   ================================================== */
+
+.pagina-acceso {
+
+    background-color: #071b30;
+
+    padding-top: 90px;
+
+    padding-bottom: 90px;
+
+    min-height: 100vh;
+
+}
+
+
+/* Tarjeta blanca */
+
+.tarjeta-acceso {
+
+    background-color: white;
+
+    width: 430px;
+
+    margin: auto;
+
+    padding: 50px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+}
+
+
+.logo-acceso {
+
+    width: 230px;
+
+    max-width: 100%;
+
+}
+
+
+.tarjeta-acceso h1 {
+
+    font-size: 35px;
+
+}
+
+
+.texto-institucional {
+
+    color: #858c94;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* ==================================================
+   02 - BIENVENIDA
+   ================================================== */
+
+.encabezado-simple {
+
+    width: 85%;
+
+    margin: auto;
+
+    padding-top: 35px;
+
+    padding-bottom: 35px;
+
+}
+
+
+.encabezado-simple h2 {
+
+    display: inline-block;
+
+    margin: 0;
+
+}
+
+
+.encabezado-simple span {
+
+    color: #b49453;
+
+}
+
+
+.encabezado-simple a {
+
+    float: right;
+
+    color: #812c4b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.bienvenida {
+
+    width: 85%;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding-top: 30px;
+
+    padding-bottom: 70px;
+
+}
+
+
+.video {
+
+    margin-top: 35px;
+
+    margin-bottom: 25px;
+
+    padding: 70px 30px;
+
+    color: white;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+}
+
+
+.video h2 {
+
+    font-size: 30px;
+
+}
+
+
+.video-azul {
+
+    background-color: #071b30;
+
+}
+
+
+.video-vino {
+
+    background-color: #70243f;
+
+}
+
+
+.play {
+
+    background-color: #c7a457;
+
+    color: #102d49;
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 30px auto;
+
+    padding-top: 19px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+}
+
+
+.final-bienvenida {
+
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    gap: 40px;
+
+    text-align: left;
+
+}
+
+
+
+/* ==================================================
+   ESTRUCTURA PRINCIPAL DE LA PLATAFORMA
+
+   Aquí utilizamos CSS GRID.
+
+   Columna 1 = menú
+   Columna 2 = contenido
+   ================================================== */
+
+.plataforma {
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* ==================================================
+   MENÚ LATERAL
+   ================================================== */
+
+.menu-lateral {
+
+    background-color: #102d49;
+
+    color: white;
+
+    padding: 35px 20px;
+
+    min-height: 100vh;
+
+}
+
+
+.menu-lateral h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 70px;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+}
+
+
+.menu-lateral h2 span {
+
+    color: #c5a45c;
+
+}
+
+
+.titulo-menu {
+
+    color: #8fa0b0;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* Los enlaces se colocan uno
+   debajo del otro */
+
+.menu-lateral nav a {
+
+    display: block;
+
+    padding: 12px;
+
+    margin-bottom: 5px;
+
+    text-decoration: none;
+
+    color: #e6ebef;
+
+    border-radius: 5px;
+
+}
+
+
+.menu-lateral nav a:hover {
+
+    background-color: #294761;
+
+}
+
+
+.menu-lateral nav .activo {
+
+    background-color: #294761;
+
+    color: #d6bc79;
+
+}
+
+
+.mensaje-lateral {
+
+    margin-top: 250px;
+
+    color: #8195a6;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+   ================================================== */
+
+.area-principal {
+
+    background-color: #f5f6f8;
+
+}
+
+
+.barra-superior {
+
+    background-color: white;
+
+    padding: 20px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 200px;
+
+    color: #65717d;
+
+    font-size: 12px;
+
+}
+
+
+.contenido {
+
+    width: 88%;
+
+    margin: auto;
+
+    padding-top: 60px;
+
+    padding-bottom: 60px;
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.footer {
+
+    background-color: white;
+
+    padding: 25px 30px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 30px;
+
+    color: #6d7882;
+
+    font-size: 11px;
+
+}
+
+
+
+/* ==================================================
+   PESTAÑAS SUPERIORES
+   ================================================== */
+
+.pestanas {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #dddddd;
+
+}
+
+
+.pestanas a {
+
+    padding: 12px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    color: #6d7580;
+
+}
+
+
+.pestanas .pestana-activa {
+
+    color: #812c4b;
+
+    border-bottom: 2px solid #812c4b;
+
+}
+
+
+
+/* ==================================================
+   NÚMEROS
+   ================================================== */
+
+.numero {
+
+    color: #812c4b;
+
+    background-color: #f4e9ed;
+
+    padding: 7px;
+
+    margin-right: 8px;
+
+}
+
+
+
+/* ==================================================
+   RUTA IDEAL
+   ================================================== */
+
+.datos-ruta {
+
+    background-color: white;
+
+    border: 1px solid #e0e2e5;
+
+    border-radius: 8px;
+
+    padding: 25px;
+
+    margin-top: 35px;
+
+    margin-bottom: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+.datos-ruta div:last-child {
+
+    text-align: right;
+
+}
+
+
+.datos-ruta small {
+
+    color: #89929b;
+
+}
+
+
+.ruta-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+}
+
+
+.tarjeta-azul {
+
+    background-color: #102d49;
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 8px;
+
+}
+
+
+.tarjeta-azul h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+}
+
+
+.pasos article {
+
+    margin-bottom: 25px;
+
+}
+
+
+.pasos span {
+
+    background-color: #f2eee4;
+
+    color: #85672d;
+
+    padding: 10px;
+
+    border-radius: 50%;
+
+}
+
+
+.pasos h3 {
+
+    margin-bottom: 2px;
+
+}
+
+
+.pasos p {
+
+    color: #7b8490;
+
+    margin-top: 0;
+
+}
+
+
+.boton-derecha {
+
+    width: 300px;
+
+    margin-left: auto;
+
+}
+
+
+
+/* ==================================================
+   PERFIL
+   ================================================== */
+
+.perfil-alumno {
+
+    background-color: white;
+
+    border: 1px solid #e0e2e5;
+
+    border-radius: 8px;
+
+    padding: 30px;
+
+    margin-top: 35px;
+
+    margin-bottom: 40px;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+}
+
+
+.avatar {
+
+    width: 60px;
+
+    height: 60px;
+
+    background-color: #f4efe3;
+
+    border-radius: 50%;
+
+    text-align: center;
+
+    padding-top: 17px;
+
+    font-size: 25px;
+
+    color: #967839;
+
+}
+
+
+.perfil-alumno h2 {
+
+    margin-top: 5px;
+
+    margin-bottom: 2px;
+
+}
+
+
+.perfil-alumno p {
+
+    margin-top: 0;
+
+    color: #78828c;
+
+}
+
+
+
+/* ==================================================
+   TABLAS
+   ================================================== */
+
+.tabla {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+
+    margin-top: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.tabla th {
+
+    background-color: #eef0f3;
+
+    color: #687480;
+
+    text-align: left;
+
+    padding: 18px;
+
+    font-size: 12px;
+
+}
+
+
+.tabla td {
+
+    padding: 20px;
+
+    border-bottom: 1px solid #dddddd;
+
+}
+
+
+.tabla a {
+
+    color: #812c4b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.tabla a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.tabla-competencia {
+
+    font-size: 13px;
+
+}
+
+
+.porcentaje {
+
+    font-size: 30px;
+
+}
+
+
+
+/* ==================================================
+   AVISOS
+   ================================================== */
+
+.aviso {
+
+    background-color: #f7f1e4;
+
+    border: 1px solid #eee3ca;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    border-radius: 7px;
+
+}
+
+
+.aviso h3 {
+
+    margin-top: 0;
+
+}
+
+
+.aviso a {
+
+    color: #812c4b;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+
+/* ==================================================
+   BOTONES DEL DETALLE
+   ================================================== */
+
+.botones-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+}
+
+
+.boton-secundario {
+
+    display: block;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    color: #132b43;
+
+    padding: 15px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+}
+
+
+.volver {
+
+    color: #812c4b;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+
+/* ==================================================
+   RECURSOS
+   ================================================== */
+
+.lista-recursos {
+
+    background-color: white;
+
+    border: 1px solid #e0e2e5;
+
+    margin-top: 35px;
+
+    border-radius: 7px;
+
+}
+
+
+.recurso {
+
+    display: grid;
+
+    grid-template-columns: 35px 1fr 100px;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #dddddd;
+
+}
+
+
+.recurso:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.recurso h3 {
+
+    margin: 0;
+
+}
+
+
+.recurso p {
+
+    margin: 5px 0 0 0;
+
+    color: #89919a;
+
+    font-size: 12px;
+
+}
+
+
+.fecha {
+
+    text-align: right;
+
+}
+
+
+.acciones-recursos {
+
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    margin-top: 30px;
+
+}
+
+
+
+/* ==================================================
+   PROGRESO
+   ================================================== */
+
+.progresos {
+
+    background-color: white;
+
+    border: 1px solid #e0e2e5;
+
+    border-radius: 8px;
+
+    margin-top: 35px;
+
+}
+
+
+.progresos article {
+
+    padding: 25px;
+
+    border-bottom: 1px solid #dddddd;
+
+}
+
+
+.progresos article:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.progresos h3 span {
+
+    float: right;
+
+}
+
+
+.progresos p {
+
+    color: #7d8790;
+
+    font-size: 12px;
+
+}
+
+
+
+/* Barra gris */
+
+.barra {
+
+    width: 100%;
+
+    height: 7px;
+
+    background-color: #e5e8ec;
+
+    border-radius: 10px;
+
+}
+
+
+/* Parte dorada */
+
+.barra-50 {
+
+    width: 50%;
+
+    height: 7px;
+
+    background-color: #b99a55;
+
+    border-radius: 10px;
+
+}
+
+
+.barra-100 {
+
+    width: 100%;
+
+    height: 7px;
+
+    background-color: #b99a55;
+
+    border-radius: 10px;
+
+}
+
+
+.barra-30 {
+
+    width: 30%;
+
+    height: 7px;
+
+    background-color: #b99a55;
+
+    border-radius: 10px;
+
+}
