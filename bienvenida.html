@@ -4,75 +4,187 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <title>TakeOff UP | Bienvenida</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TakeOff UP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-    <!-- Encabezado -->
-    <header class="encabezado-simple">
-
-        <h2>TAKEOFF <span>UP</span></h2>
-
-        <a href="index.html">
-            Ir al inicio ↗
-        </a>
-
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <h2>TakeOff UP</h2>
+        <img class="logo" src="imagen/Logo TakeOff UP.png" alt="Logo TakeOff UP">
     </header>
 
+    <main class="contenido">
 
-    <main class="bienvenida">
+        <!-- VIDEO E INSIGNIAS -->
+        <section class="zona-superior">
 
-        <p class="subtitulo">
-            ANTES DE DESPEGAR
-        </p>
-
-        <h1>
-            Conoce TAKEOFF UP
-        </h1>
-
-        <p class="texto-gris">
-            Un programa para descubrir y desarrollar tu potencial.
-        </p>
-
-
-        <!-- Simulación del video de bienvenida -->
-
-        <section class="video video-azul">
-
-            <p class="texto-dorado">
-                COMPETENCIES HIGH PERFORMANCE PROGRAM
-            </p>
-
-            <h2>
-                Grandes metas.
-                <br>
-                Un nuevo punto de partida.
-            </h2>
-
-            <div class="play">
-                ▶
+            <div class="video">
+                <div class="video-contenedor">
+                    <div class="play">▶</div>
+                    <p>Video de bienvenida</p>
+                </div>
             </div>
 
-            <p>VIDEO DE BIENVENIDA</p>
+            <div class="insignias">
+                <h3>Insignias obtenidas</h3>
+                <div class="insignias-grid">
+                    <div class="insignia"><span>★</span></div>
+                    <div class="insignia"><span>★</span></div>
+                    <div class="insignia"><span>★</span></div>
+                    <div class="insignia"><span>★</span></div>
+                    <div class="insignia"><span>★</span></div>
+                </div>
+            </div>
 
         </section>
 
 
-        <section class="final-bienvenida">
+        <!-- TUS COMPETENCIAS -->
+        <section class="competencias">
+            <h2>Tus competencias</h2>
 
-            <p>
-                Conoce el programa, tus competencias
-                y el camino que puedes construir.
-            </p>
+            <div class="competencias-grid">
+                <div class="lista-competencias">
 
-            <a class="boton-principal" href="inicio.html">
-                Comenzar mi recorrido →
-            </a>
+                    <!-- Adaptabilidad -->
+                    <a class="competencia-fila" href="adaptabilidad.html">
+                        <span>Adaptabilidad</span>
+                        <div class="nivel-medidor">
+                            <p>Nivel</p>
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel adaptabilidad">
+                                    <span class="numero numero-0">0</span>
+                                    <span class="numero numero-1">1</span>
+                                    <span class="numero numero-2">2</span>
+                                    <span class="numero numero-3">3</span>
+                                    <span class="numero numero-4">4</span>
+                                    <span class="numero numero-5">5</span>
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Liderazgo -->
+                    <a class="competencia-fila" href="liderazgo.html">
+                        <span>Liderazgo</span>
+                        <div class="nivel-medidor">
+                            <p>Nivel</p>
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel liderazgo">
+                                    <span class="numero numero-0">0</span>
+                                    <span class="numero numero-1">1</span>
+                                    <span class="numero numero-2">2</span>
+                                    <span class="numero numero-3">3</span>
+                                    <span class="numero numero-4">4</span>
+                                    <span class="numero numero-5">5</span>
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Creatividad -->
+                    <a class="competencia-fila" href="creatividad.html">
+                        <span>Creatividad</span>
+                        <div class="nivel-medidor">
+                            <p>Nivel</p>
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel creatividad">
+                                    <span class="numero numero-0">0</span>
+                                    <span class="numero numero-1">1</span>
+                                    <span class="numero numero-2">2</span>
+                                    <span class="numero numero-3">3</span>
+                                    <span class="numero numero-4">4</span>
+                                    <span class="numero numero-5">5</span>
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Inteligencia emocional -->
+                    <a class="competencia-fila" href="inteligencia-emocional.html">
+                        <span>Inteligencia emocional</span>
+                        <div class="nivel-medidor">
+                            <p>Nivel</p>
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel inteligencia">
+                                    <span class="numero numero-0">0</span>
+                                    <span class="numero numero-1">1</span>
+                                    <span class="numero numero-2">2</span>
+                                    <span class="numero numero-3">3</span>
+                                    <span class="numero numero-4">4</span>
+                                    <span class="numero numero-5">5</span>
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MI PROGRESO -->
+        <section class="mi-progreso">
+
+            <p class="etiqueta">PROGRESO</p>
+            <h2>Mi desarrollo</h2>
+            <p class="descripcion">Cada avance cuenta</p>
+
+            <!-- Adaptabilidad -->
+            <div class="progreso-item">
+                <div class="progreso-datos">
+                    <span>Adaptabilidad</span>
+                </div>
+                <div class="barra-desarrollo adaptabilidad">
+                    <div class="relleno-desarrollo p0"></div>
+                    <div class="cohete p0">🚀<span>0%</span></div>
+                </div>
+            </div>
+
+            <!-- Liderazgo -->
+            <div class="progreso-item">
+                <div class="progreso-datos">
+                    <span>Liderazgo</span>
+                </div>
+                <div class="barra-desarrollo liderazgo">
+                    <div class="relleno-desarrollo p0"></div>
+                    <div class="cohete p0">🚀<span>0%</span></div>
+                </div>
+            </div>
+
+            <!-- Creatividad -->
+            <div class="progreso-item">
+                <div class="progreso-datos">
+                    <span>Creatividad</span>
+                </div>
+                <div class="barra-desarrollo creatividad">
+                    <div class="relleno-desarrollo p0"></div>
+                    <div class="cohete p0">🚀<span>0%</span></div>
+                </div>
+            </div>
+
+            <!-- Inteligencia emocional -->
+            <div class="progreso-item">
+                <div class="progreso-datos">
+                    <span>Inteligencia emocional</span>
+                </div>
+                <div class="barra-desarrollo inteligencia">
+                    <div class="relleno-desarrollo p0"></div>
+                    <div class="cohete p0">🚀<span>0%</span></div>
+                </div>
+            </div>
 
         </section>
 

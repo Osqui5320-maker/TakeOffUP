@@ -1,1123 +1,541 @@
-/* ==================================================
-   TAKEOFF UP
-   HOJA DE ESTILOS GENERAL
+/* =========================================================
+   BASE
+   ========================================================= */
 
-   Este mismo archivo CSS se utiliza
-   para todas nuestras páginas HTML.
-   ================================================== */
-
-
-/* ==================================================
-   CONFIGURACIÓN GENERAL
-   ================================================== */
+:root {
+    --azul: #102d49;
+    --vino: #812c4b;
+    --morado: #6b3476;
+    --verde: #345c37;
+    --dorado: #a88445;
+    --gris-texto: #71808e;
+    --gris-borde: #dddddd;
+    --gris-claro: #e4e4e4;
+    --fondo: #f5f6f8;
+}
 
 * {
-
-    /*
-       Hace que padding y border formen
-       parte del tamaño del elemento.
-    */
-
     box-sizing: border-box;
-
 }
-
 
 body {
-
     margin: 0;
-
     font-family: Arial, sans-serif;
-
-    color: #132b43;
-
-    background-color: #f5f6f8;
-
+    background-color: var(--fondo);
+    color: var(--azul);
 }
 
 
-h1 {
-
-    font-size: 38px;
-
-    margin-top: 10px;
-
-    margin-bottom: 12px;
-
-}
-
-
-h2,
-h3,
-p {
-
-    line-height: 1.5;
-
-}
-
-
-a {
-
-    color: inherit;
-
-}
-
-
-
-/* ==================================================
-   COLORES Y TEXTOS GENERALES
-   ================================================== */
-
-
-/* Texto vino */
-
-.subtitulo {
-
-    color: #812c4b;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-}
-
-
-/* Texto gris */
-
-.texto-gris {
-
-    color: #7b8490;
-
-    line-height: 1.7;
-
-}
-
-
-/* Texto dorado */
-
-.texto-dorado {
-
-    color: #c6a45b;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-}
-
-
-
-/* ==================================================
-   BOTÓN PRINCIPAL
-
-   Aunque visualmente parece un botón,
-   utilizamos <a> porque queremos navegar
-   entre páginas.
-   ================================================== */
-
-.boton-principal {
-
-    display: block;
-
-    background-color: #102d49;
-
-    color: white;
-
-    padding: 15px 25px;
-
-    text-decoration: none;
-
-    text-align: center;
-
-    border-radius: 6px;
-
-    font-weight: bold;
-
-}
-
-
-/* :hover ocurre cuando ponemos
-   el mouse encima */
-
-.boton-principal:hover {
-
-    background-color: #812c4b;
-
-}
-
-
-
-/* ==================================================
-   01 - PÁGINA DE ACCESO
-   ================================================== */
-
-.pagina-acceso {
-
-    background-color: #071b30;
-
-    padding-top: 90px;
-
-    padding-bottom: 90px;
-
-    min-height: 100vh;
-
-}
-
-
-/* Tarjeta blanca */
-
-.tarjeta-acceso {
-
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.cabecera {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 12px 40px;
     background-color: white;
-
-    width: 430px;
-
-    margin: auto;
-
-    padding: 50px;
-
-    text-align: center;
-
-    border-radius: 15px;
-
+    border-bottom: 1px solid var(--gris-borde);
 }
 
-
-.logo-acceso {
-
-    width: 230px;
-
-    max-width: 100%;
-
-}
-
-
-.tarjeta-acceso h1 {
-
-    font-size: 35px;
-
-}
-
-
-.texto-institucional {
-
-    color: #858c94;
-
-    font-size: 12px;
-
-    margin-top: 20px;
-
-}
-
-
-
-/* ==================================================
-   02 - BIENVENIDA
-   ================================================== */
-
-.encabezado-simple {
-
-    width: 85%;
-
-    margin: auto;
-
-    padding-top: 35px;
-
-    padding-bottom: 35px;
-
-}
-
-
-.encabezado-simple h2 {
-
-    display: inline-block;
-
+.cabecera h2 {
     margin: 0;
+    font-size: 18px;
+}
 
+.logo {
+    width: 110px;
+    height: auto;
+    justify-self: end; /* logo a la derecha */
 }
 
 
-.encabezado-simple span {
-
-    color: #b49453;
-
-}
-
-
-.encabezado-simple a {
-
-    float: right;
-
-    color: #812c4b;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-}
-
-
-.bienvenida {
-
-    width: 85%;
-
-    margin: auto;
-
-    text-align: center;
-
-    padding-top: 30px;
-
-    padding-bottom: 70px;
-
-}
-
-
-.video {
-
-    margin-top: 35px;
-
-    margin-bottom: 25px;
-
-    padding: 70px 30px;
-
-    color: white;
-
-    text-align: center;
-
-    border-radius: 8px;
-
-}
-
-
-.video h2 {
-
-    font-size: 30px;
-
-}
-
-
-.video-azul {
-
-    background-color: #071b30;
-
-}
-
-
-.video-vino {
-
-    background-color: #70243f;
-
-}
-
-
-.play {
-
-    background-color: #c7a457;
-
-    color: #102d49;
-
-    width: 60px;
-
-    height: 60px;
-
-    margin: 30px auto;
-
-    padding-top: 19px;
-
-    border-radius: 50%;
-
-    font-size: 20px;
-
-}
-
-
-.final-bienvenida {
-
-    display: grid;
-
-    grid-template-columns: 1fr 300px;
-
-    gap: 40px;
-
-    text-align: left;
-
-}
-
-
-
-/* ==================================================
-   ESTRUCTURA PRINCIPAL DE LA PLATAFORMA
-
-   Aquí utilizamos CSS GRID.
-
-   Columna 1 = menú
-   Columna 2 = contenido
-   ================================================== */
-
-.plataforma {
-
-    display: grid;
-
-    grid-template-columns: 220px 1fr;
-
-    min-height: 100vh;
-
-}
-
-
-
-/* ==================================================
-   MENÚ LATERAL
-   ================================================== */
-
-.menu-lateral {
-
-    background-color: #102d49;
-
-    color: white;
-
-    padding: 35px 20px;
-
-    min-height: 100vh;
-
-}
-
-
-.menu-lateral h2 {
-
-    margin-top: 0;
-
-    margin-bottom: 70px;
-
-    font-size: 20px;
-
-    font-weight: normal;
-
-}
-
-
-.menu-lateral h2 span {
-
-    color: #c5a45c;
-
-}
-
-
-.titulo-menu {
-
-    color: #8fa0b0;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-}
-
-
-/* Los enlaces se colocan uno
-   debajo del otro */
-
-.menu-lateral nav a {
-
-    display: block;
-
-    padding: 12px;
-
-    margin-bottom: 5px;
-
-    text-decoration: none;
-
-    color: #e6ebef;
-
-    border-radius: 5px;
-
-}
-
-
-.menu-lateral nav a:hover {
-
-    background-color: #294761;
-
-}
-
-
-.menu-lateral nav .activo {
-
-    background-color: #294761;
-
-    color: #d6bc79;
-
-}
-
-
-.mensaje-lateral {
-
-    margin-top: 250px;
-
-    color: #8195a6;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-}
-
-
-
-/* ==================================================
-   ÁREA PRINCIPAL
-   ================================================== */
-
-.area-principal {
-
-    background-color: #f5f6f8;
-
-}
-
-
-.barra-superior {
-
-    background-color: white;
-
-    padding: 20px 30px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 200px;
-
-    color: #65717d;
-
-    font-size: 12px;
-
-}
-
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
 
 .contenido {
-
-    width: 88%;
-
-    margin: auto;
-
-    padding-top: 60px;
-
-    padding-bottom: 60px;
-
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
 }
 
 
+/* =========================================================
+   VIDEO
+   ========================================================= */
 
-/* ==================================================
-   FOOTER
-   ================================================== */
-
-.footer {
-
-    background-color: white;
-
-    padding: 25px 30px;
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-
-    gap: 30px;
-
-    color: #6d7882;
-
-    font-size: 11px;
-
+.video {
+    margin-bottom: 45px;
 }
 
-
-
-/* ==================================================
-   PESTAÑAS SUPERIORES
-   ================================================== */
-
-.pestanas {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    margin-bottom: 35px;
-
-    border-bottom: 1px solid #dddddd;
-
-}
-
-
-.pestanas a {
-
-    padding: 12px;
-
+.video-contenedor {
+    width: 65%;
+    min-height: 280px;
+    margin: 0 auto;
+    padding-top: 90px;
+    background-color: var(--azul);
+    color: white;
     text-align: center;
+    border-radius: 12px;
+}
 
+.play {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    padding-top: 21px;
+    background-color: white;
+    color: var(--azul);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   INSIGNIAS
+   ========================================================= */
+
+.insignias {
+    position: relative;
+    top: -10px;
+    width: 220px;
+    padding-bottom: 5px;
+    background-color: #fff59d;
+    border-radius: 3px;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transform: rotate(-2deg);
+}
+
+.insignias::before {
+    content: "📌";
+    position: absolute;
+    top: -18px;
+    left: 10%;
+    transform: translate(-50%);
+    font-size: 28px;
+}
+
+.insignias h3 {
+    position: relative;
+    top: 5px;
+    left: 7px;
+}
+
+.insignias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 55px);
+    gap: 15px;
+    position: relative;
+    top: -5px;
+    left: 25px;
+}
+
+.insignia {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--gris-claro);
+    color: var(--azul);
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.insignia:nth-child(n + 4) {
+    position: relative;
+    left: 35px;
+}
+
+.insignia span {
+    position: relative;
+    top: -1px;
+}
+
+
+/* =========================================================
+   COMPETENCIAS
+   ========================================================= */
+
+.competencias {
+    padding: 30px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.competencias h2 {
+    margin-top: 0;
+}
+
+.competencias-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.competencia-fila {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: center;
+    padding: 16px 10px;
+    border-bottom: 1px solid var(--gris-claro);
+    color: var(--azul);
     text-decoration: none;
+}
 
+a.competencia-fila:hover {
+    background-color: #f6f0e3;
+}
+
+.competencia-titulos {
+    color: var(--gris-texto);
+    font-size: 12px;
     font-weight: bold;
+}
 
-    color: #6d7580;
+.nivel {
+    font-weight: bold;
+}
 
+.progreso-general {
+    padding: 10px;
+    text-align: center;
+}
+
+.progreso-titulo {
+    font-weight: bold;
 }
 
 
-.pestanas .pestana-activa {
+/* =========================================================
+   MEDIDOR DE NIVEL
+   ========================================================= */
 
-    color: #812c4b;
-
-    border-bottom: 2px solid #812c4b;
-
+.nivel-medidor {
+    width: 240px;
+    justify-self: end;
+    text-align: center;
 }
 
+.nivel-medidor p {
+    position: relative;
+    top: -5px;
+    left: -13px;
+}
 
+.nivel-grafica {
+    position: relative;
+    width: 220px;
+    height: 120px;
+    margin: 0 auto;
+}
 
-/* ==================================================
-   NÚMEROS
-   ================================================== */
+.arco-nivel {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-radius: 200px 200px 0 0;
+}
+
+/* Franja de colores (cada competencia define su gradiente) */
+.arco-nivel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    border-radius: 200px 200px 0 0;
+}
+
+/* Semicírculo blanco que tapa el centro y deja solo la franja visible */
+.arco-nivel::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    width: 170px;
+    height: 85px;
+    background-color: white;
+    border-radius: 170px 170px 0 0;
+}
+
+.arco-nivel.adaptabilidad::before {
+    background: conic-gradient(
+        from 270deg at 50% 100%,
+        #d8d8d8 0deg 30deg,
+        #ddd0b3 30deg 60deg,
+        #c8ad72 60deg 90deg,
+        #ad8749 90deg 120deg,
+        #8e5363 120deg 150deg,
+        #812c4b 150deg 180deg
+    );
+}
+
+.arco-nivel.liderazgo::before {
+    background: conic-gradient(
+        from 270deg at 50% 100%,
+        #d8d8d8 0deg 30deg,
+        #d5dce5 30deg 60deg,
+        #aabbd0 60deg 90deg,
+        #7894b4 90deg 120deg,
+        #456b91 120deg 150deg,
+        #102d49 150deg 180deg
+    );
+}
+
+.arco-nivel.creatividad::before {
+    background: conic-gradient(
+        from 270deg at 50% 100%,
+        #d8d8d8 0deg 30deg,
+        #e4d8e8 30deg 60deg,
+        #c9afd2 60deg 90deg,
+        #ae83b8 90deg 120deg,
+        #8e5899 120deg 150deg,
+        #6b3476 150deg 180deg
+    );
+}
+
+.arco-nivel.inteligencia::before {
+    background: conic-gradient(
+        from 270deg at 50% 100%,
+        #d8d8d8 0deg 30deg,
+        #d7e2d4 30deg 60deg,
+        #adc6a7 60deg 90deg,
+        #7fa67a 90deg 120deg,
+        #568052 120deg 150deg,
+        #345c37 150deg 180deg
+    );
+}
+
+.aguja-nivel {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    z-index: 3;
+    width: 75px;
+    height: 3px;
+    background-color: var(--azul);
+    transform-origin: left center;
+    transform: rotate(180deg);
+}
+
+.centro-nivel {
+    position: absolute;
+    bottom: -7px;
+    left: 93px;
+    z-index: 4;
+    width: 14px;
+    height: 14px;
+    background-color: var(--azul);
+    border-radius: 50%;
+}
 
 .numero {
-
-    color: #812c4b;
-
-    background-color: #f4e9ed;
-
-    padding: 7px;
-
-    margin-right: 8px;
-
-}
-
-
-
-/* ==================================================
-   RUTA IDEAL
-   ================================================== */
-
-.datos-ruta {
-
-    background-color: white;
-
-    border: 1px solid #e0e2e5;
-
-    border-radius: 8px;
-
-    padding: 25px;
-
-    margin-top: 35px;
-
-    margin-bottom: 30px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-}
-
-
-.datos-ruta div:last-child {
-
-    text-align: right;
-
-}
-
-
-.datos-ruta small {
-
-    color: #89929b;
-
-}
-
-
-.ruta-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 30px;
-
-}
-
-
-.tarjeta-azul {
-
-    background-color: #102d49;
-
-    color: white;
-
-    padding: 35px;
-
-    border-radius: 8px;
-
-}
-
-
-.tarjeta-azul h2 {
-
-    font-family: Georgia, serif;
-
-    font-size: 32px;
-
-    font-weight: normal;
-
-}
-
-
-.pasos article {
-
-    margin-bottom: 25px;
-
-}
-
-
-.pasos span {
-
-    background-color: #f2eee4;
-
-    color: #85672d;
-
-    padding: 10px;
-
-    border-radius: 50%;
-
-}
-
-
-.pasos h3 {
-
-    margin-bottom: 2px;
-
-}
-
-
-.pasos p {
-
-    color: #7b8490;
-
-    margin-top: 0;
-
-}
-
-
-.boton-derecha {
-
-    width: 300px;
-
-    margin-left: auto;
-
-}
-
-
-
-/* ==================================================
-   PERFIL
-   ================================================== */
-
-.perfil-alumno {
-
-    background-color: white;
-
-    border: 1px solid #e0e2e5;
-
-    border-radius: 8px;
-
-    padding: 30px;
-
-    margin-top: 35px;
-
-    margin-bottom: 40px;
-
-    display: grid;
-
-    grid-template-columns: 80px 1fr;
-
-}
-
-
-.avatar {
-
-    width: 60px;
-
-    height: 60px;
-
-    background-color: #f4efe3;
-
-    border-radius: 50%;
-
-    text-align: center;
-
-    padding-top: 17px;
-
-    font-size: 25px;
-
-    color: #967839;
-
-}
-
-
-.perfil-alumno h2 {
-
-    margin-top: 5px;
-
-    margin-bottom: 2px;
-
-}
-
-
-.perfil-alumno p {
-
-    margin-top: 0;
-
-    color: #78828c;
-
-}
-
-
-
-/* ==================================================
-   TABLAS
-   ================================================== */
-
-.tabla {
-
-    width: 100%;
-
-    border-collapse: collapse;
-
-    background-color: white;
-
-    margin-top: 20px;
-
-    margin-bottom: 25px;
-
-}
-
-
-.tabla th {
-
-    background-color: #eef0f3;
-
-    color: #687480;
-
-    text-align: left;
-
-    padding: 18px;
-
-    font-size: 12px;
-
-}
-
-
-.tabla td {
-
-    padding: 20px;
-
-    border-bottom: 1px solid #dddddd;
-
-}
-
-
-.tabla a {
-
-    color: #812c4b;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-}
-
-
-.tabla a:hover {
-
-    text-decoration: underline;
-
-}
-
-
-.tabla-competencia {
-
+    position: absolute;
+    z-index: 4;
+    color: var(--azul);
     font-size: 13px;
-
-}
-
-
-.porcentaje {
-
-    font-size: 30px;
-
-}
-
-
-
-/* ==================================================
-   AVISOS
-   ================================================== */
-
-.aviso {
-
-    background-color: #f7f1e4;
-
-    border: 1px solid #eee3ca;
-
-    padding: 20px;
-
-    margin-top: 25px;
-
-    border-radius: 7px;
-
-}
-
-
-.aviso h3 {
-
-    margin-top: 0;
-
-}
-
-
-.aviso a {
-
-    color: #812c4b;
-
     font-weight: bold;
-
-    text-decoration: none;
-
 }
 
+.numero-0 { left: 3px;   bottom: -18px; }
+.numero-1 { left: 20px;  top: 18px; }
+.numero-2 { left: 68px;  top: -10px; }
+.numero-3 { right: 68px; top: -10px; }
+.numero-4 { right: 20px; top: 18px; }
+.numero-5 { right: 3px;  bottom: -18px; }
 
 
-/* ==================================================
-   BOTONES DEL DETALLE
-   ================================================== */
+/* =========================================================
+   MI PROGRESO
+   ========================================================= */
 
-.botones-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 30px;
-
-    margin-top: 30px;
-
-}
-
-
-.boton-secundario {
-
-    display: block;
-
+.mi-progreso {
+    padding: 35px;
     background-color: white;
+    border-radius: 12px;
+}
 
-    border: 1px solid #dddddd;
+.mi-progreso h2 {
+    margin: 0 0 5px;
+}
 
-    color: #132b43;
-
-    padding: 15px;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    border-radius: 6px;
-
+.etiqueta {
+    margin-bottom: 5px;
+    color: var(--dorado);
+    font-size: 11px;
     font-weight: bold;
-
+    letter-spacing: 2px;
 }
 
-
-.volver {
-
-    color: #812c4b;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
+.descripcion {
+    margin: 0 0 30px;
+    color: var(--gris-texto);
 }
 
-
-
-/* ==================================================
-   RECURSOS
-   ================================================== */
-
-.lista-recursos {
-
-    background-color: white;
-
-    border: 1px solid #e0e2e5;
-
-    margin-top: 35px;
-
-    border-radius: 7px;
-
+.progreso-item {
+    margin-bottom: 30px;
 }
 
-
-.recurso {
-
+.progreso-datos {
     display: grid;
-
-    grid-template-columns: 35px 1fr 100px;
-
-    padding: 20px;
-
-    border-bottom: 1px solid #dddddd;
-
+    grid-template-columns: 1fr 70px;
+    margin-bottom: 8px;
 }
 
-
-.recurso:last-child {
-
-    border-bottom: none;
-
-}
-
-
-.recurso h3 {
-
-    margin: 0;
-
-}
-
-
-.recurso p {
-
-    margin: 5px 0 0 0;
-
-    color: #89919a;
-
-    font-size: 12px;
-
-}
-
-
-.fecha {
-
+.progreso-datos strong {
     text-align: right;
-
 }
 
-
-.acciones-recursos {
-
-    display: grid;
-
-    grid-template-columns: 1fr 300px;
-
-    margin-top: 30px;
-
+/* Barra de desarrollo */
+.barra-desarrollo {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    margin-top: 40px;
+    background-color: var(--gris-claro);
+    border-radius: 10px;
 }
 
-
-
-/* ==================================================
-   PROGRESO
-   ================================================== */
-
-.progresos {
-
-    background-color: white;
-
-    border: 1px solid #e0e2e5;
-
-    border-radius: 8px;
-
-    margin-top: 35px;
-
+.relleno-desarrollo {
+    height: 100%;
+    border-radius: 10px;
 }
 
+.barra-desarrollo.adaptabilidad .relleno-desarrollo { background-color: var(--vino); }
+.barra-desarrollo.liderazgo .relleno-desarrollo     { background-color: var(--azul); }
+.barra-desarrollo.creatividad .relleno-desarrollo   { background-color: var(--morado); }
+.barra-desarrollo.inteligencia .relleno-desarrollo  { background-color: var(--verde); }
 
-.progresos article {
+/* Cohete */
+.cohete {
+    position: absolute;
+    top: -40px;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%);
+    font-size: 24px;
+    text-align: center;
+}
 
+.cohete span {
+    margin-left: 4px;
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Porcentajes de avance (relleno y posición del cohete) */
+.relleno-desarrollo.p0   { width: 0%; }
+.relleno-desarrollo.p25  { width: 25%; }
+.relleno-desarrollo.p50  { width: 50%; }
+.relleno-desarrollo.p75  { width: 75%; }
+.relleno-desarrollo.p100 { width: 100%; }
+
+.cohete.p0   { left: 0%; }
+.cohete.p25  { left: 25%; }
+.cohete.p50  { left: 50%; }
+.cohete.p75  { left: 75%; }
+.cohete.p100 { left: 100%; }
+
+
+/* =========================================================
+   PÁGINA DE COMPETENCIA
+   ========================================================= */
+
+.regresar {
+    color: var(--vino);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.titulo-pagina {
+    margin: 25px 0;
+}
+
+.resumen-competencia {
     padding: 25px;
-
-    border-bottom: 1px solid #dddddd;
-
+    margin-bottom: 35px;
+    background-color: white;
+    border-radius: 12px;
 }
 
-
-.progresos article:last-child {
-
-    border-bottom: none;
-
+.resumen-fila {
+    display: grid;
+    grid-template-columns: 1fr 70px 2fr 1.5fr 100px;
+    gap: 20px;
+    padding: 18px 5px;
+    border-bottom: 1px solid var(--gris-borde);
 }
 
-
-.progresos h3 span {
-
-    float: right;
-
-}
-
-
-.progresos p {
-
-    color: #7d8790;
-
+.resumen-titulos {
+    color: var(--gris-texto);
     font-size: 12px;
-
+    font-weight: bold;
 }
 
-
-
-/* Barra gris */
-
-.barra {
-
-    width: 100%;
-
-    height: 7px;
-
-    background-color: #e5e8ec;
-
-    border-radius: 10px;
-
+.estado-progreso strong {
+    display: block;
+    font-size: 22px;
 }
 
-
-/* Parte dorada */
-
-.barra-50 {
-
-    width: 50%;
-
-    height: 7px;
-
-    background-color: #b99a55;
-
-    border-radius: 10px;
-
+.estado-progreso small {
+    color: var(--gris-texto);
 }
 
-
-.barra-100 {
-
-    width: 100%;
-
-    height: 7px;
-
-    background-color: #b99a55;
-
-    border-radius: 10px;
-
+.recursos {
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
 }
 
+.recursos h2 {
+    margin-top: 0;
+}
 
-.barra-30 {
+.recurso-fila {
+    display: grid;
+    grid-template-columns: 40px 1fr 130px;
+    gap: 15px;
+    align-items: center;
+    padding: 18px 10px;
+    border-bottom: 1px solid var(--gris-borde);
+}
 
-    width: 30%;
+.recurso-fila input {
+    width: 18px;
+    height: 18px;
+}
 
-    height: 7px;
+.recurso-informacion small {
+    display: block;
+    margin-top: 5px;
+    color: var(--gris-texto);
+}
 
-    background-color: #b99a55;
+.recurso-fecha {
+    color: var(--gris-texto);
+    font-size: 13px;
+}
 
-    border-radius: 10px;
+.boton-inscribir {
+    display: block;
+    width: 180px;
+    margin: 30px 0 0 auto;
+    padding: 13px;
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
 
+.boton-inscribir:hover {
+    background-color: var(--vino);
 }
