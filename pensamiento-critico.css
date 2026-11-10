@@ -1,0 +1,176 @@
+/* Contenedor de cada actividad */
+.recurso-item {
+    min-width: 0;
+    margin-bottom: 16px;
+}
+
+/* Tarjeta para entregar la evidencia */
+.recurso-evidencia {
+    padding: 22px;
+    margin-bottom: 18px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dce3e9;
+    border-left: 4px solid #102d49;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Estado de la evidencia */
+.evidencia-estado {
+    margin: 0 0 16px;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+/* Etiqueta del archivo */
+.evidencia-etiqueta {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #526270;
+    font-size: 13px;
+}
+
+/* Archivo a la izquierda y botón a la derecha */
+.evidencia-controles {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+
+    align-items: center;
+    gap: 16px;
+}
+
+/* Selector de archivo */
+.archivo-evidencia {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+
+    background-color: #f5f7fa;
+    border: 1px solid #dce3e9;
+    border-radius: 8px;
+
+    color: #526270;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+/* Botón interno: seleccionar archivo */
+.archivo-evidencia::file-selector-button {
+    margin-right: 12px;
+    padding: 10px 14px;
+
+    background-color: #ffffff;
+    border: 1px solid #c5ced7;
+    border-radius: 6px;
+
+    color: #102d49;
+    font-family: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.archivo-evidencia::file-selector-button:hover {
+    background-color: #eef2f6;
+}
+
+.archivo-evidencia:disabled::file-selector-button {
+    cursor: default;
+}
+
+/* Botón: subir o actualizar evidencia */
+.boton-evidencia {
+    width: 100%;
+    padding: 14px 12px;
+
+    background-color: #102d49;
+    border: none;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.boton-evidencia:not(:disabled):hover {
+    background-color: var(--vino);
+}
+
+.boton-evidencia:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Instrucciones debajo del selector */
+.evidencia-ayuda {
+    display: block;
+    margin-top: 12px;
+
+    color: #526270;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Mensajes de confirmación y error */
+.evidencia-mensaje {
+    margin: 12px 0;
+
+    color: #345c37;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.evidencia-mensaje.error {
+    color: #812c4b;
+}
+
+.evidencia-mensaje:empty {
+    display: none;
+}
+
+/* Botón: descargar evidencia */
+.descargar-evidencia {
+    margin-top: 10px;
+    padding: 10px 16px;
+
+    background-color: #ffffff;
+    border: 1px solid #102d49;
+    border-radius: 6px;
+
+    color: #102d49;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.descargar-evidencia:hover {
+    background-color: #eef2f6;
+}
+
+/* Indicador de entrega realizada */
+.recurso-fila.completado .recurso-fecha::after {
+    content: "✓ Evidencia entregada";
+}
+
+/* Navegación con teclado */
+.recurso-evidencia :focus-visible {
+    outline: 3px solid #a88445;
+    outline-offset: 3px;
+}
+
+/* Respetar la visibilidad controlada por JavaScript */
+.recurso-evidencia[hidden],
+.descargar-evidencia[hidden] {
+    display: none;
+}

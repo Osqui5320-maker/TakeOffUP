@@ -14,13 +14,43 @@
     <!-- CABECERA -->
     <header class="cabecera">
         <h2>TakeOff UP</h2>
-        <img class="logo" src="imagen/Logo TakeOff UP.png" alt="Logo TakeOff UP">
+        <div class="cabecera-acciones">
+            <img class="logo" src="imagen/Logo TakeOff UP.png" alt="Logo TakeOff UP">
+
+            <a class="acceso-perfil" href="perfil.html" aria-label="Abrir mi perfil académico" title="Mi perfil">
+
+                <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <circle cx="32" cy="32" r="32" fill="#e4e8ed" />
+                    <circle cx="32" cy="24" r="11" fill="currentColor" />
+                    <path d="M12 57a20 20 0 0 1 40 0 32 32 0 0 1-40 0" fill="currentColor" />
+                </svg>
+
+            </a>
+
+        </div>
+
     </header>
+
 
     <main class="contenido">
 
         <!-- VIDEO E INSIGNIAS -->
         <section class="zona-superior">
+
+            <div class="bienvenida-tarjeta">
+                <p class="bienvenida-etiqueta">TU DESARROLLO EMPIEZA AQUÍ</p>
+                <h1>Bienvenido a <span>TakeOff UP</span></h1>
+
+                <p>
+                    Descubre experiencias que te ayudarán a fortalecer
+                    tus competencias durante tu vida universitaria
+                </p>
+
+                <p>
+                    Explora las actividades de tu carrera, participa
+                    y registra tus avances con evidencias
+                </p>
+            </div>
 
             <div class="video">
                 <div class="video-contenedor">
@@ -44,148 +74,128 @@
 
 
         <!-- TUS COMPETENCIAS -->
-        <section class="competencias">
+        <section class="competencias" id="tus-competencias">
             <h2>Tus competencias</h2>
 
             <div class="competencias-grid">
                 <div class="lista-competencias">
 
-                    <!-- Adaptabilidad -->
-                    <a class="competencia-fila" href="adaptabilidad.html">
-                        <span>Adaptabilidad</span>
+                    <!-- Flexibilidad -->
+                    <a class="competencia-fila" href="flexibilidad.html">
+                        <span>Flexibilidad</span>
                         <div class="nivel-medidor">
-                            <p>Nivel</p>
                             <div class="nivel-grafica">
-                                <div class="arco-nivel adaptabilidad">
-                                    <span class="numero numero-0">0</span>
-                                    <span class="numero numero-1">1</span>
-                                    <span class="numero numero-2">2</span>
-                                    <span class="numero numero-3">3</span>
-                                    <span class="numero numero-4">4</span>
-                                    <span class="numero numero-5">5</span>
+                                <div class="arco-nivel flexibilidad">
                                     <div class="aguja-nivel"></div>
                                     <div class="centro-nivel"></div>
                                 </div>
                             </div>
+                            <p class="porcentaje-competencia">0%</p>
                         </div>
                     </a>
 
-                    <!-- Liderazgo -->
+                    <!-- Liderazgo con sentido social -->
                     <a class="competencia-fila" href="liderazgo.html">
-                        <span>Liderazgo</span>
+                        <span>Liderazgo con sentido social</span>
                         <div class="nivel-medidor">
-                            <p>Nivel</p>
                             <div class="nivel-grafica">
                                 <div class="arco-nivel liderazgo">
-                                    <span class="numero numero-0">0</span>
-                                    <span class="numero numero-1">1</span>
-                                    <span class="numero numero-2">2</span>
-                                    <span class="numero numero-3">3</span>
-                                    <span class="numero numero-4">4</span>
-                                    <span class="numero numero-5">5</span>
                                     <div class="aguja-nivel"></div>
                                     <div class="centro-nivel"></div>
                                 </div>
                             </div>
+                            <p class="porcentaje-competencia">0%</p>
                         </div>
                     </a>
 
-                    <!-- Creatividad -->
-                    <a class="competencia-fila" href="creatividad.html">
-                        <span>Creatividad</span>
+                    <!-- Innovación -->
+                    <a class="competencia-fila" href="innovacion.html">
+                        <span>Innovación</span>
                         <div class="nivel-medidor">
-                            <p>Nivel</p>
                             <div class="nivel-grafica">
-                                <div class="arco-nivel creatividad">
-                                    <span class="numero numero-0">0</span>
-                                    <span class="numero numero-1">1</span>
-                                    <span class="numero numero-2">2</span>
-                                    <span class="numero numero-3">3</span>
-                                    <span class="numero numero-4">4</span>
-                                    <span class="numero numero-5">5</span>
+                                <div class="arco-nivel innovacion">
                                     <div class="aguja-nivel"></div>
                                     <div class="centro-nivel"></div>
                                 </div>
                             </div>
+                            <p class="porcentaje-competencia">0%</p>
                         </div>
                     </a>
 
-                    <!-- Inteligencia emocional -->
-                    <a class="competencia-fila" href="inteligencia-emocional.html">
-                        <span>Inteligencia emocional</span>
+                    <!-- Madurez emocional -->
+                    <a class="competencia-fila" href="madurez-emocional.html">
+                        <span>Madurez emocional</span>
                         <div class="nivel-medidor">
-                            <p>Nivel</p>
                             <div class="nivel-grafica">
-                                <div class="arco-nivel inteligencia">
-                                    <span class="numero numero-0">0</span>
-                                    <span class="numero numero-1">1</span>
-                                    <span class="numero numero-2">2</span>
-                                    <span class="numero numero-3">3</span>
-                                    <span class="numero numero-4">4</span>
-                                    <span class="numero numero-5">5</span>
+                                <div class="arco-nivel madurez-emocional">
+                                    <p class="porcentaje-competencia">0%</p>
                                     <div class="aguja-nivel"></div>
                                     <div class="centro-nivel"></div>
                                 </div>
                             </div>
+                            <p class="porcentaje-competencia">0%</p>
+                        </div>
+                    </a>
+
+                    <!-- Compromiso con la verdad -->
+                    <a class="competencia-fila" href="compromiso-con-la-verdad.html">
+                        <span>Compromiso con la verdad</span>
+                        <div class="nivel-medidor">
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel compromiso-con-la-verdad">
+                                    <p class="porcentaje-competencia">0%</p>
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                            <p class="porcentaje-competencia">0%</p>
+                        </div>
+                    </a>
+
+                    <!-- Sentido trascendente -->
+                    <a class="competencia-fila" href="sentido-trascendente.html">
+                        <span>Sentido trascendente</span>
+                        <div class="nivel-medidor">
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel sentido-trascendente">
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                            <p class="porcentaje-competencia">0%</p>
+                        </div>
+                    </a>
+
+                    <!-- Excelencia humana -->
+                    <a class="competencia-fila" href="excelencia-humana.html">
+                        <span>Excelencia humana</span>
+                        <div class="nivel-medidor">
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel excelencia-humana">
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                            <p class="porcentaje-competencia">0%</p>
+                        </div>
+                    </a>
+
+                    <!-- Pensamiento crítico -->
+                    <a class="competencia-fila" href="pensamiento-critico.html">
+                        <span>Pensamiento crítico</span>
+                        <div class="nivel-medidor">
+                            <div class="nivel-grafica">
+                                <div class="arco-nivel pensamiento-critico">
+                                    <div class="aguja-nivel"></div>
+                                    <div class="centro-nivel"></div>
+                                </div>
+                            </div>
+                            <p class="porcentaje-competencia">0%</p>
                         </div>
                     </a>
 
                 </div>
             </div>
-        </section>
-
-
-        <!-- MI PROGRESO -->
-        <section class="mi-progreso">
-
-            <p class="etiqueta">PROGRESO</p>
-            <h2>Mi desarrollo</h2>
-            <p class="descripcion">Cada avance cuenta</p>
-
-            <!-- Adaptabilidad -->
-            <div class="progreso-item">
-                <div class="progreso-datos">
-                    <span>Adaptabilidad</span>
-                </div>
-                <div class="barra-desarrollo adaptabilidad">
-                    <div class="relleno-desarrollo p0"></div>
-                    <div class="cohete p0">🚀<span>0%</span></div>
-                </div>
-            </div>
-
-            <!-- Liderazgo -->
-            <div class="progreso-item">
-                <div class="progreso-datos">
-                    <span>Liderazgo</span>
-                </div>
-                <div class="barra-desarrollo liderazgo">
-                    <div class="relleno-desarrollo p0"></div>
-                    <div class="cohete p0">🚀<span>0%</span></div>
-                </div>
-            </div>
-
-            <!-- Creatividad -->
-            <div class="progreso-item">
-                <div class="progreso-datos">
-                    <span>Creatividad</span>
-                </div>
-                <div class="barra-desarrollo creatividad">
-                    <div class="relleno-desarrollo p0"></div>
-                    <div class="cohete p0">🚀<span>0%</span></div>
-                </div>
-            </div>
-
-            <!-- Inteligencia emocional -->
-            <div class="progreso-item">
-                <div class="progreso-datos">
-                    <span>Inteligencia emocional</span>
-                </div>
-                <div class="barra-desarrollo inteligencia">
-                    <div class="relleno-desarrollo p0"></div>
-                    <div class="cohete p0">🚀<span>0%</span></div>
-                </div>
-            </div>
-
         </section>
 
     </main>

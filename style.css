@@ -1,17 +1,14 @@
-/* =========================================================
-   BASE
-   ========================================================= */
-
+/*base*/
 :root {
     --azul: #102d49;
     --vino: #812c4b;
     --morado: #6b3476;
     --verde: #345c37;
-    --dorado: #a88445;
-    --gris-texto: #71808e;
-    --gris-borde: #dddddd;
+    --dorado: #ad8b50;
+    --gris-texto: #66615b;
+    --gris-borde: #e6dcc9;
     --gris-claro: #e4e4e4;
-    --fondo: #f5f6f8;
+    --fondo: #f8f4eb;
 }
 
 * {
@@ -22,13 +19,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--fondo);
-    color: var(--azul);
+    color: #333333;
 }
 
-
-/* =========================================================
-   CABECERA
-   ========================================================= */
+/*cabecera*/
 
 .cabecera {
     display: grid;
@@ -36,24 +30,24 @@ body {
     align-items: center;
     padding: 12px 40px;
     background-color: white;
-    border-bottom: 1px solid var(--gris-borde);
+    border-bottom: 3px solid var(--dorado);
 }
 
 .cabecera h2 {
     margin: 0;
     font-size: 18px;
+    color: #333333;
 }
+
+/* logo a la derecha */
 
 .logo {
     width: 110px;
     height: auto;
-    justify-self: end; /* logo a la derecha */
+    justify-self: end;
 }
 
-
-/* =========================================================
-   CONTENIDO PRINCIPAL
-   ========================================================= */
+/*contenido principal*/
 
 .contenido {
     width: 85%;
@@ -62,276 +56,378 @@ body {
     padding: 40px 0 60px;
 }
 
+/*Bienvenida, video e insignias */
 
-/* =========================================================
-   VIDEO
-   ========================================================= */
-
-.video {
-    margin-bottom: 45px;
+.zona-superior {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) minmax(0px, 1.6fr);
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-.video-contenedor {
-    width: 65%;
-    min-height: 280px;
-    margin: 0 auto;
-    padding-top: 90px;
-    background-color: var(--azul);
-    color: white;
-    text-align: center;
+/*Tarejeta de presentación*/
+
+.bienvenida-tarjeta {
+    padding: 32px;
+    background-color: var(--dorado);
+    border-radius: 1px solid var(--dorado);
     border-radius: 12px;
 }
 
-.play {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto;
-    padding-top: 21px;
-    background-color: white;
-    color: var(--azul);
-    border-radius: 50%;
+.bienvenida-etiqueta {
+    margin: 0 0 10px;
+    color: #333333;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+.bienvenida-tarjeta h1 {
+    margin: 0 0 24px;
+    color: #29251f;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.bienvenida-tarjeta h1 span {
+    display: block;
+}
+
+.bienvenida-tarjeta>p:not(.bienvenida.etiqueta) {
+    margin: 0 0 18px;
+    color: #29251f;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/*Espacio del video de bienvenida*/
+
+.video {
+    min-width: 0;
+}
+
+.video-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 360px;
+    height: 100%;
+    padding: 40px;
+    background-color: var(--azul);
+    border-radius: 18px;
+    color: white;
+    text-align: center;
+}
+
+.video-contenedor p {
+    margin: 0;
     font-size: 20px;
 }
 
-
-/* =========================================================
-   INSIGNIAS
-   ========================================================= */
-
-.insignias {
-    position: relative;
-    top: -10px;
-    width: 220px;
-    padding-bottom: 5px;
-    background-color: #fff59d;
-    border-radius: 3px;
-    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transform: rotate(-2deg);
+.play {
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    padding-left: 4px;
+    background-color: white;
+    border: 3px solid #ad8b50;
+    border-radius: 50%;
+    color: var(--azul);
+    font-size: 26px;
 }
 
-.insignias::before {
-    content: "📌";
-    position: absolute;
-    top: -18px;
-    left: 10%;
-    transform: translate(-50%);
-    font-size: 28px;
+/*Tarjeta de insignias*/
+
+.insignias {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 24px 32px;
+    background-color: #ffffff;
+    border: 1px solid var(--gris-borde);
+    border-radius: 12px;
 }
 
 .insignias h3 {
-    position: relative;
-    top: 5px;
-    left: 7px;
+    margin: 0;
+    color: #333333;
+    font-size: 18px;
 }
 
 .insignias-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 55px);
-    gap: 15px;
-    position: relative;
-    top: -5px;
-    left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
 .insignia {
     display: grid;
     place-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: var(--gris-claro);
-    color: var(--azul);
+    width: 46px;
+    height: 46px;
+    background-color: #e5e2dc;
+    border: 1px solid #d3cec3;
     border-radius: 50%;
-    font-size: 15px;
+    color: #73706a;
+    font-size: 22px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.insignia:nth-child(n + 4) {
-    position: relative;
-    left: 35px;
+.insignia.obtenida {
+    background-color: var(--dorado);
+    border-color: var(--dorado);
+    color: #29251f;
 }
 
-.insignia span {
-    position: relative;
-    top: -1px;
+@media (max-width: 800px) {
+    .zona-superior {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
-
-/* =========================================================
-   COMPETENCIAS
-   ========================================================= */
+/* Competencias */
 
 .competencias {
-    padding: 30px;
     margin-bottom: 40px;
-    background-color: white;
-    border-radius: 12px;
+    padding: 0;
+    background: transparent;
 }
 
 .competencias h2 {
-    margin-top: 0;
+    margin: 0 0 24px;
+    font-size: 26px;
+    color: var(--azul);
 }
 
 .competencias-grid {
+    display: block;
+}
+
+.lista-competencias {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .competencia-fila {
-    display: grid;
-    grid-template-columns: 1fr 300px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 16px 10px;
-    border-bottom: 1px solid var(--gris-claro);
-    color: var(--azul);
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 0;
+    min-height: 120px;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    border: 1px solid var(--gris-borde);
+    border-left: 6px solid var(--dorado);
+    border-radius: 12px;
+    color: #333333;
     text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.competencia-fila>span {
+    flex: 1;
+    min-width: 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: left;
 }
 
 a.competencia-fila:hover {
-    background-color: #f6f0e3;
+    background-color: #f8f4eb;
+    border-color: #ad8b50;
+    box-shadow: 0 6px 18px rgba(16, 45, 73, 0.08);
 }
 
-.competencia-titulos {
-    color: var(--gris-texto);
-    font-size: 12px;
-    font-weight: bold;
+.competencia-fila:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 4px;
+}
+
+/* Centrar el medidor dentro de cada tarjeta */
+.competencia-fila .nivel-medidor {
+    align-self: center;
+}
+
+@media (max-width: 800px) {
+    .lista-competencias {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .nivel {
     font-weight: bold;
 }
 
-.progreso-general {
-    padding: 10px;
-    text-align: center;
-}
-
-.progreso-titulo {
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   MEDIDOR DE NIVEL
-   ========================================================= */
+/*medidor de nivel*/
 
 .nivel-medidor {
-    width: 240px;
-    justify-self: end;
+    width: 90px;
+    flex-shrink: 0;
+    margin: 0;
     text-align: center;
+    transform: scale(1.1);
+    transform-origin: center;
 }
 
 .nivel-medidor p {
-    position: relative;
-    top: -5px;
-    left: -13px;
+    margin: 10px 0 0;
+    color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 .nivel-grafica {
     position: relative;
-    width: 220px;
-    height: 120px;
+    width: 90px;
+    height: 56px;
     margin: 0 auto;
 }
 
 .arco-nivel {
     position: relative;
-    width: 200px;
-    height: 100px;
-    border-radius: 200px 200px 0 0;
+    width: 90px;
+    height: 45px;
+    border-radius: 90px 90px 0 0;
 }
 
-/* Franja de colores (cada competencia define su gradiente) */
+/* Franja de colores*/
+
 .arco-nivel::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 100px;
-    border-radius: 200px 200px 0 0;
+    width: 90px;
+    height: 45px;
+    border-radius: 90px 90px 0 0;
 }
 
-/* Semicírculo blanco que tapa el centro y deja solo la franja visible */
+/* Semicirculo blanco que tapa el centro*/
+
 .arco-nivel::after {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 7px;
+    left: 7px;
     z-index: 1;
-    width: 170px;
-    height: 85px;
+    width: 76px;
+    height: 38px;
     background-color: white;
-    border-radius: 170px 170px 0 0;
+    border-radius: 76px 76px 0 0;
 }
 
-.arco-nivel.adaptabilidad::before {
-    background: conic-gradient(
-        from 270deg at 50% 100%,
-        #d8d8d8 0deg 30deg,
-        #ddd0b3 30deg 60deg,
-        #c8ad72 60deg 90deg,
-        #ad8749 90deg 120deg,
-        #8e5363 120deg 150deg,
-        #812c4b 150deg 180deg
-    );
+.arco-nivel.flexibilidad::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #fff0c2 0deg,
+            #ffe095 36deg,
+            #f5c65e 72deg,
+            #e5ae36 108deg,
+            #cb9023 144deg,
+            #ad761b 180deg);
 }
 
 .arco-nivel.liderazgo::before {
-    background: conic-gradient(
-        from 270deg at 50% 100%,
-        #d8d8d8 0deg 30deg,
-        #d5dce5 30deg 60deg,
-        #aabbd0 60deg 90deg,
-        #7894b4 90deg 120deg,
-        #456b91 120deg 150deg,
-        #102d49 150deg 180deg
-    );
+    background: conic-gradient(from 270deg at 50% 100%,
+            #fbd5e1 0deg,
+            #f3a9c0 36deg,
+            #e67a9e 72deg,
+            #cf507d 108deg,
+            #aa365f 144deg,
+            #812c4b 180deg);
 }
 
-.arco-nivel.creatividad::before {
-    background: conic-gradient(
-        from 270deg at 50% 100%,
-        #d8d8d8 0deg 30deg,
-        #e4d8e8 30deg 60deg,
-        #c9afd2 60deg 90deg,
-        #ae83b8 90deg 120deg,
-        #8e5899 120deg 150deg,
-        #6b3476 150deg 180deg
-    );
+.arco-nivel.innovacion::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #ecd9fc 0deg,
+            #d6b4f2 36deg,
+            #bd8de5 72deg,
+            #a367d4 108deg,
+            #8748b8 144deg,
+            #6d3297 180deg);
 }
 
-.arco-nivel.inteligencia::before {
-    background: conic-gradient(
-        from 270deg at 50% 100%,
-        #d8d8d8 0deg 30deg,
-        #d7e2d4 30deg 60deg,
-        #adc6a7 60deg 90deg,
-        #7fa67a 90deg 120deg,
-        #568052 120deg 150deg,
-        #345c37 150deg 180deg
-    );
+.arco-nivel.madurez-emocional::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #dcf3cc 0deg,
+            #bce49f 36deg,
+            #96d373 72deg,
+            #70ba50 108deg,
+            #509637 144deg,
+            #36752a 180deg);
+}
+
+.arco-nivel.compromiso-con-la-verdad::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #ffe0cc 0deg,
+            #ffc19e 36deg,
+            #f59c73 72deg,
+            #e57c52 108deg,
+            #c65c39 144deg,
+            #a44329 180deg);
+}
+
+.arco-nivel.sentido-trascendente::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #d4eafa 0deg,
+            #acd3f0 36deg,
+            #7db7e3 72deg,
+            #5298cf 108deg,
+            #357bb0 144deg,
+            #245e8c 180deg);
+}
+
+.arco-nivel.excelencia-humana::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #ccf3e9 0deg,
+            #9ce3d5 36deg,
+            #67cebc 72deg,
+            #3ab29e 108deg,
+            #23917f 144deg,
+            #187363 180deg);
+}
+
+.arco-nivel.pensamiento-critico::before {
+    background: conic-gradient(from 270deg at 50% 100%,
+            #e1e7f0 0deg,
+            #bcc9dc 36deg,
+            #94aac6 72deg,
+            #708eaf 108deg,
+            #526e91 144deg,
+            #394f70 180deg);
 }
 
 .aguja-nivel {
     position: absolute;
     bottom: 0;
-    left: 100px;
+    left: 45px;
     z-index: 3;
-    width: 75px;
-    height: 3px;
+    width: 34px;
+    height: 2px;
     background-color: var(--azul);
     transform-origin: left center;
     transform: rotate(180deg);
+    transition: transform 0.8s ease-out;
 }
 
 .centro-nivel {
     position: absolute;
-    bottom: -7px;
-    left: 93px;
+    bottom: -3px;
+    left: 42px;
     z-index: 4;
-    width: 14px;
-    height: 14px;
+    width: 6px;
+    height: 6px;
     background-color: var(--azul);
     border-radius: 50%;
 }
@@ -340,38 +436,69 @@ a.competencia-fila:hover {
     position: absolute;
     z-index: 4;
     color: var(--azul);
-    font-size: 13px;
+    font-size: 9px;
     font-weight: bold;
 }
 
-.numero-0 { left: 3px;   bottom: -18px; }
-.numero-1 { left: 20px;  top: 18px; }
-.numero-2 { left: 68px;  top: -10px; }
-.numero-3 { right: 68px; top: -10px; }
-.numero-4 { right: 20px; top: 18px; }
-.numero-5 { right: 3px;  bottom: -18px; }
-
-
-/* =========================================================
-   MI PROGRESO
-   ========================================================= */
-
-.mi-progreso {
-    padding: 35px;
-    background-color: white;
-    border-radius: 12px;
+.numero-0 {
+    left: -1px;
+    bottom: -11px;
 }
 
-.mi-progreso h2 {
-    margin: 0 0 5px;
+.numero-1 {
+    left: -4px;
+    top: 5px;
+}
+
+.numero-2 {
+    left: 23px;
+    top: -10px;
+}
+
+.numero-3 {
+    right: 23px;
+    top: -10px;
+}
+
+.numero-4 {
+    right: -4px;
+    top: 5px;
+}
+
+.numero-5 {
+    right: -3px;
+    bottom: -11px;
+}
+
+/* Mi progreso */
+.mi-progreso {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 32px;
+    background-color: #f8f4eb;
+    border: 1px solid #e6dcc9;
+    border-radius: 18px;
+}
+
+.mi-progreso>.etiqueta,
+.mi-progreso>h2,
+.mi-progreso>.descripcion {
+    grid-column: 1 / -1;
+    margin: 0;
 }
 
 .etiqueta {
     margin-bottom: 5px;
-    color: var(--dorado);
+    color: #65502e;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.mi-progreso h2 {
+    color: var(--azul);
+    font-size: 26px;
 }
 
 .descripcion {
@@ -379,75 +506,34 @@ a.competencia-fila:hover {
     color: var(--gris-texto);
 }
 
+.mi-progreso>.descripcion {
+    margin-bottom: 8px;
+    color: #526270;
+}
+
 .progreso-item {
-    margin-bottom: 30px;
+    min-width: 0;
+    padding: 24px 32px 30px;
+    background-color: white;
+    border: 1px solid #e6dcc9;
+    border-radius: 14px;
 }
 
 .progreso-datos {
-    display: grid;
-    grid-template-columns: 1fr 70px;
     margin-bottom: 8px;
-}
-
-.progreso-datos strong {
-    text-align: right;
-}
-
-/* Barra de desarrollo */
-.barra-desarrollo {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    margin-top: 40px;
-    background-color: var(--gris-claro);
-    border-radius: 10px;
-}
-
-.relleno-desarrollo {
-    height: 100%;
-    border-radius: 10px;
-}
-
-.barra-desarrollo.adaptabilidad .relleno-desarrollo { background-color: var(--vino); }
-.barra-desarrollo.liderazgo .relleno-desarrollo     { background-color: var(--azul); }
-.barra-desarrollo.creatividad .relleno-desarrollo   { background-color: var(--morado); }
-.barra-desarrollo.inteligencia .relleno-desarrollo  { background-color: var(--verde); }
-
-/* Cohete */
-.cohete {
-    position: absolute;
-    top: -40px;
-    display: flex;
-    align-items: center;
-    transform: translateX(-50%);
-    font-size: 24px;
-    text-align: center;
-}
-
-.cohete span {
-    margin-left: 4px;
     color: var(--azul);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
 }
 
-/* Porcentajes de avance (relleno y posición del cohete) */
-.relleno-desarrollo.p0   { width: 0%; }
-.relleno-desarrollo.p25  { width: 25%; }
-.relleno-desarrollo.p50  { width: 50%; }
-.relleno-desarrollo.p75  { width: 75%; }
-.relleno-desarrollo.p100 { width: 100%; }
+@media (max-width: 800px) {
+    .mi-progreso {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 24px;
+    }
+}
 
-.cohete.p0   { left: 0%; }
-.cohete.p25  { left: 25%; }
-.cohete.p50  { left: 50%; }
-.cohete.p75  { left: 75%; }
-.cohete.p100 { left: 100%; }
-
-
-/* =========================================================
-   PÁGINA DE COMPETENCIA
-   ========================================================= */
+/*pagina de competencia*/
 
 .regresar {
     color: var(--vino);
@@ -460,33 +546,45 @@ a.competencia-fila:hover {
 }
 
 .resumen-competencia {
-    padding: 25px;
-    margin-bottom: 35px;
-    background-color: white;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    border: 1px solid var(--gris-borde);
+    border-left: 6px solid var(--dorado);
     border-radius: 12px;
 }
 
 .resumen-fila {
     display: grid;
-    grid-template-columns: 1fr 70px 2fr 1.5fr 100px;
+    grid-template-columns: minmax(0, 1fr) 70px minmax(0, 3fr);
+    align-items: start;
     gap: 20px;
-    padding: 18px 5px;
-    border-bottom: 1px solid var(--gris-borde);
+    padding: 14px 0;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: none;
 }
 
 .resumen-titulos {
     color: var(--gris-texto);
     font-size: 12px;
     font-weight: bold;
+    border-bottom: 1px solid var(--gris-borde);
 }
 
 .estado-progreso strong {
     display: block;
-    font-size: 22px;
+    color: #333333;
+    font-size: 26px;
+    line-height: 1.2;
 }
 
 .estado-progreso small {
+    display: block;
+    margin-top: 5px;
     color: var(--gris-texto);
+    font-size: 12px;
 }
 
 .recursos {
@@ -506,11 +604,25 @@ a.competencia-fila:hover {
     align-items: center;
     padding: 18px 10px;
     border-bottom: 1px solid var(--gris-borde);
+    cursor: pointer;
 }
 
 .recurso-fila input {
     width: 18px;
     height: 18px;
+}
+
+.recurso-fila.inscrito {
+    background-color: #f1f6f1;
+    cursor: default;
+}
+
+.recurso-fila.inscrito .recurso-fecha::after {
+    content: "✓ Inscrito";
+    display: block;
+    margin-top: 4px;
+    color: var(--verde);
+    font-weight: bold;
 }
 
 .recurso-informacion small {
@@ -524,18 +636,148 @@ a.competencia-fila:hover {
     font-size: 13px;
 }
 
-.boton-inscribir {
+/*adaptable a pantallas pequeñas*/
+
+@media (max-width: 800px) {
+    .cabecera {
+        padding: 12px 20px;
+    }
+
+    .zona-superior {
+        flex-direction: column;
+    }
+
+    .zona-superior .insignias {
+        margin-top: 10px;
+    }
+
+    .competencia-fila {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .nivel-medidor {
+        justify-self: center;
+    }
+
+    .resumen-titulos {
+        display: none;
+    }
+
+    .resumen-fila {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+}
+
+/* Acceso al perfil desde la cabecera */
+.cabecera-acciones {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 24px;
+}
+
+.acceso-perfil {
     display: block;
-    width: 180px;
-    margin: 30px 0 0 auto;
-    padding: 13px;
-    background-color: var(--azul);
-    color: white;
-    border: none;
-    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: var(--azul);
+    transition: color 0.2s, box-shadow 0.2s;
+}
+
+.acceso-perfil svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.acceso-perfil:hover {
+    color: var(--vino);
+    box-shadow: 0 0 0 4px #f0e5e9;
+}
+
+.acceso-perfil:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+.ficha-competencia {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 72px minmax(0, 2fr);
+    align-items: start;
+    gap: 16px 24px;
+}
+
+.ficha-etiqueta {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--gris-texto);
+    font-size: 12px;
     font-weight: bold;
 }
 
-.boton-inscribir:hover {
-    background-color: var(--vino);
+.ficha-nombre {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.ficha-competencia .ficha-nivel {
+    position: static;
+    width: auto;
+    min-width: 36px;
+    margin: 0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: #f3ecde;
+    color: #65502e;
+    text-align: center;
+    transform: none;
+}
+
+.ficha-descripcion {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .ficha-competencia {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .ficha-competencia> :last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+.ficha-bloque-nivel {
+    display: grid;
+    justify-items: start;
+    align-self: start;
+}
+
+/* Explorar recursos — todas las competencias */
+.recursos {
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid var(--gris-borde);
+    border-left: 6px solid var(--dorado);
+    border-radius: 12px;
+}
+
+.recursos .recurso-fila {
+    grid-template-columns: 22px minmax(0, 1fr) 150px;
+    gap: 12px;
+    padding: 12px 10px;
+}
+
+.recursos .recurso-fecha {
+    color: #65502e;
+    font-size: 12px;
+    text-align: right;
 }

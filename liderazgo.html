@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Liderazgo | TakeOff UP</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="liderazgo.css">
 </head>
 
-<body>
+<body data-competencia="liderazgo">
 
     <!-- CABECERA -->
     <header class="cabecera">
@@ -20,81 +23,36 @@
 
         <a class="regresar" href="bienvenida.html">Tus competencias</a>
 
-        <h1 class="titulo-pagina">Liderazgo</h1>
+        <h1 class="titulo-pagina">Liderazgo con sentido social</h1>
 
         <!-- INFORMACIÓN DE LA COMPETENCIA -->
-        <section class="resumen-competencia">
-
-            <div class="resumen-fila resumen-titulos">
-                <span>Competencia</span>
-                <span>Nivel</span>
-                <span>Oportunidades</span>
-                <span>Recursos</span>
-                <span>Progreso</span>
+        <section class="resumen-competencia ficha-competencia" aria-label="Resumen de Liderazgo">
+            <div>
+                <span class="ficha-etiqueta">Competencia</span>
+                <strong class="ficha-nombre">Liderazgo</strong>
             </div>
 
-            <div class="resumen-fila">
-                <strong>Liderazgo</strong>
-                <span class="nivel">0</span>
-                <span>
-                    Fortalecer la capacidad de guiar, colaborar y acompañar a otros
-                    para alcanzar objetivos.
-                </span>
-                <span>Revisa los recursos disponibles.</span>
-                <div class="estado-progreso">
-                    <strong>0%</strong>
-                    <small>En desarrollo</small>
-                </div>
+            <div class="ficha-bloque-nivel">
+                <span class="ficha-etiqueta">Nivel</span>
+                <span class="nivel ficha-nivel">0</span>
             </div>
 
+            <div>
+                <span class="ficha-etiqueta">Oportunidades</span>
+                <p class="ficha-descripcion">
+                    Fortalecer la capacidad de guiar y colaborar con otros
+                    para alcanzar objetivos que beneficien a la comunidad.
+                </p>
+            </div>
         </section>
 
         <!-- EXPLORAR RECURSOS -->
         <section class="recursos">
-
             <h2>Explorar recursos</h2>
             <p class="descripcion">
-                Selecciona las actividades disponibles que acompañarán tu desarrollo.
+                Aquí podrás consultar las actividades para desarrollar
+                tu liderazgo con sentido social.
             </p>
-
-            <label class="recurso-fila">
-                <input type="checkbox">
-                <span class="recurso-informacion">
-                    <strong>Liderazgo en acción</strong>
-                    <small>Taller práctico</small>
-                </span>
-                <span class="recurso-fecha">Fecha<br>Hora</span>
-            </label>
-
-            <label class="recurso-fila">
-                <input type="checkbox">
-                <span class="recurso-informacion">
-                    <strong>Comunicación y liderazgo</strong>
-                    <small>Actividad de desarrollo</small>
-                </span>
-                <span class="recurso-fecha">Fecha<br>Hora</span>
-            </label>
-
-            <label class="recurso-fila">
-                <input type="checkbox">
-                <span class="recurso-informacion">
-                    <strong>Trabajo con equipos</strong>
-                    <small>Taller práctico</small>
-                </span>
-                <span class="recurso-fecha">Fecha<br>Hora</span>
-            </label>
-
-            <label class="recurso-fila">
-                <input type="checkbox">
-                <span class="recurso-informacion">
-                    <strong>Reflexión sobre liderazgo</strong>
-                    <small>Actividad individual</small>
-                </span>
-                <span class="recurso-fecha">Fecha<br>Hora</span>
-            </label>
-
-            <button class="boton-inscribir" type="button">Inscribir</button>
-
         </section>
 
     </main>
