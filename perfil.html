@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi perfil | TakeOff UP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h2>TakeOff UP</h2>
+        <img class="logo" src="imagen/Logo TakeOff UP.png" alt="Logo TakeOff UP">
+    </header>
+
+    <main class="perfil-contenido">
+        <section class="perfil-tarjeta" aria-labelledby="titulo-perfil">
+            <h1 id="titulo-perfil">Mi perfil académico</h1>
+            <p class="perfil-descripcion">
+                Selecciona tus datos para consultar las actividades
+                que corresponden a tu carrera.
+            </p>
+
+            <form id="formulario-perfil">
+                <div class="perfil-campo">
+                    <label for="escuela">Escuela o facultad</label>
+                    <select id="escuela" name="escuela" required disabled>
+                        <option value="">Selecciona tu escuela</option>
+                    </select>
+                </div>
+
+                <div class="perfil-campo">
+                    <label for="carrera">Carrera</label>
+                    <select id="carrera" name="carrera" required disabled>
+                        <option value="">Primero selecciona tu escuela</option>
+                    </select>
+                </div>
+
+                <div class="perfil-campo">
+                    <label for="semestre">Semestre actual</label>
+                    <select id="semestre" name="semestre" required disabled>
+                        <option value="">Primero selecciona tu carrera</option>
+                    </select>
+                </div>
+
+                <button id="guardar-perfil" type="submit" disabled>
+                    Guardar perfil
+                </button>
+
+                <p id="mensaje-perfil" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
