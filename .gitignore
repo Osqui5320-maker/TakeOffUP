@@ -1,0 +1,5 @@
+# Configuración privada
+.env
+
+# Archivos de registro
+*.log
