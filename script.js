@@ -41,3 +41,17 @@ if (actividadesConEvidencia < actividadesInscritas && actividad1TieneEvidencia =
 } else {
     console.log("Entrega repetida bloqueada. Progreso: " + progreso + "%");
 }
+
+for (let numero = 1; numero <= 2; numero = numero + 1) {
+    let tieneEvidencia = actividad1TieneEvidencia;
+
+    if (numero === 2) {
+        tieneEvidencia = actividad1TieneEvidencia;
+    }
+
+    if (!tieneEvidencia) {
+        console.log("Actividad " + numero + ": Pendiente de evidencia");
+    } else {
+        console.log("Actividad " + numero + ": Con evidencia");
+    }
+}
