@@ -1,7 +1,7 @@
 let totalActividades = 5;
 let actividadesInscritas = 0;
 let actividadesConEvidencia = 0;
-let porcentajeEnPantalla = document.getElementById("Porcentaje-progreso");
+let porcentajeEnPantalla = document.getElementById("porcentaje-progreso");
 let estadoEnPantalla = document.getElementById("estado-progreso");
 
 function actualizarProgreso() {
