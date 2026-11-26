@@ -1,57 +1,44 @@
-var totalActividades = 5;
-var actividadesInscritas = 0;
-var actividadesConEvidencia = 0;
-var actividad1TieneEvidencia = false;
-var progreso = 0;
-var estado = "Sin Iniciar";
+let totalActividades = 5;
+let actividadesInscritas = 0;
+let actividadesConEvidencia = 0;
+let porcentajeEnPantalla = document.getElementById("Porcentaje-progreso");
+let estadoEnPantalla = document.getElementById("estado-progreso");
 
-console.log("Inicio: " + estado + "|" + progreso + "%");
+function actualizarProgreso() {
+    let progreso = actividadesConEvidencia * 100 / totalActividades;
+    let estado = "Sin Iniciar";
 
-//El alumno se inscribe en una actividad. 
-actividadesInscritas = actividadesInscritas + 1;
+    if (progreso === 100) {
+        estado = "Completado";
+    } else if (actividadesConEvidencia > 0) {
+        estado = "En desarrollo";
+    } else if (actividadesInscritas > 0) {
+        estado = "Pendiente de evidencia";
+    }
 
-if (actividadesInscritas > 0) {
-    estado = "Pendiente de evidencia";
-}
-
-console.log("Inscripción: " + estado + "|" + progreso + "%");
-
-//El almuno entrega evidencia para esa actividad 
-actividadesConEvidencia = actividadesConEvidencia + 1;
-actividad1TieneEvidencia = true;
-
-if (totalActividades > 0) {
-    progreso = actividadesConEvidencia * 100 / totalActividades;
-}
-
-if (actividadesConEvidencia < actividadesInscritas && actividad1TieneEvidencia === false) {
-    estado = "Completado";
-} else {
-    estado = "En desarrollo";
-}
-
-console.log("Evidencia: " + estado + "|" + progreso + "%");
-
-// El alumno se inscribe en una segunda actividad.
-actividadesInscritas = actividadesInscritas + 1;
-
-// Intenta entregar evidencia otra vez para la actividad 1.
-if (actividadesConEvidencia < actividadesInscritas && actividad1TieneEvidencia === false) {
-    console.log("Se permitiría registrar la evidencia.");
-} else {
-    console.log("Entrega repetida bloqueada. Progreso: " + progreso + "%");
+    porcentajeEnPantalla.textContent = progreso + "%";
+    estadoEnPantalla.textContent = estado;
 }
 
 for (let numero = 1; numero <= 2; numero = numero + 1) {
-    let tieneEvidencia = actividad1TieneEvidencia;
+    let boton = document.getElementById("inscribir-" + numero);
+    let campoEvidencia = document.getElementById("evidencia-" + numero);
+    let tieneEvidencia = false;
 
-    if (numero === 2) {
-        tieneEvidencia = actividad1TieneEvidencia;
-    }
+    boton.addEventListener("click", function () {
+        actividadesInscritas = actividadesInscritas + 1;
+        boton.textContent = "Inscrito";
+        boton.disabled = true;
+        campoEvidencia.disabled = false;
+        actualizarProgreso();
+    });
 
-    if (!tieneEvidencia) {
-        console.log("Actividad " + numero + ": Pendiente de evidencia");
-    } else {
-        console.log("Actividad " + numero + ": Con evidencia");
-    }
+    campoEvidencia.addEventListener("change", function () {
+        if (campoEvidencia.files.length > 0 && !tieneEvidencia) {
+            tieneEvidencia = true;
+            actividadesConEvidencia = actividadesConEvidencia + 1;
+            actualizarProgreso();
+        }
+    });
+
 }

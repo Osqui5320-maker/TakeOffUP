@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/flexibilidad.css">
 </head>
 
-<body>
+<body data-competencia="flexibilidad">
 
     <!-- CABECERA -->
     <header class="cabecera">
@@ -21,7 +21,7 @@
 
     <main class="contenido">
 
-        <a class="regresar" href="../bienvenida.html">Tus competencias</a>
+        <a class="regresar" href="bienvenida.html">Tus competencias</a>
 
         <h1 class="titulo-pagina">Flexibilidad</h1>
 
@@ -51,10 +51,28 @@
             <p class="descripcion">
                 Aquí podrás consultar las actividades para desarrollar tu flexibilidad.
             </p>
+            <p aria-live="polite">
+                Progreso: <strong id="porcentaje-progreso">0%</strong> ·
+                <span id="estado-progreso">Sin iniciar</span>
+            </p>
+
+            <div>
+                <h3>Actividad 1</h3>
+                <button id="inscribir-1" type="button">Inscribir</button>
+                <label for="evidencia-1">Seleccionar evidencia</label>
+                <input id="evidencia-1" type="file" disabled>
+            </div>
+
+            <div>
+                <h3>Actividad 2</h3>
+                <button id="inscribir-2" type="button">Inscribir</button>
+                <label for="evidencia-2">Seleccionar evidencia</label>
+                <input id="evidencia-2" type="file" disabled>
+            </div>
         </section>
 
     </main>
-
+    <script src="../script.js"></script>
 </body>
 
 </html>
