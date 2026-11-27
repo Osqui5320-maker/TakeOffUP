@@ -18,6 +18,12 @@ function actualizarProgreso() {
 
     porcentajeEnPantalla.textContent = progreso + "%";
     estadoEnPantalla.textContent = estado;
+
+    const nivelEnPantalla = document.getElementById("nivel-competencia");
+
+    if (nivelEnPantalla !== null) {
+        nivelEnPantalla.textContent = actividadesConEvidencia;
+    }
 }
 
 for (let numero = 1; numero <= 2; numero = numero + 1) {
